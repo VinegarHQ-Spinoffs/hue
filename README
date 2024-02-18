@@ -1,0 +1,4 @@
+hue - a posix shell script to control your philips hue lights
+
+How to install
+put the hue file into $PATH, that could be .local/bin or /usr/bin.
