@@ -1,0 +1,20 @@
+#!/bin/sh
+# Utility to change a hue light state
+# READ THIS: https://developers.meethue.com/develop/get-started-2/
+
+USER=""
+IP=""
+LIGHT=""
+
+curl_api() {
+	curl http://$IP/api/$USER/lights/$LIGHT/state "$@"
+}
+
+case "$1" in 
+	on) curl_api -X PUT --data-raw '{"on":true}' ;;
+	off) curl_api -X PUT --data-raw '{"on":false}' ;;
+	bri) curl_api -X PUT --data-raw '{"bri":'"$2"'}' ;;
+	sat) curl_api -X PUT --data-raw '{"sat":'"$2"'}' ;;
+	hue) curl_api -X put --data-raw '{"sat"}:'"$2"'}' ;;
+	*) echo "usage: ${0##*/} on|off|bri|sat|hue" ;;
+esac
