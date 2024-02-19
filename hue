@@ -1,5 +1,5 @@
 #!/bin/sh
-# Utility to change a hue light state
+# Utility to change a hue lights state
 # READ THIS: https://developers.meethue.com/develop/get-started-2/
 
 USER=""
