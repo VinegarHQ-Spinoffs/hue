@@ -2,3 +2,8 @@ hue - a posix shell script to control your philips hue lights
 
 How to install
 put the hue file into $PATH, that could be .local/bin or /usr/bin.
+
+How to configure
+read https://developers.meethue.com/develop/get-started-2/
+the USER variable in .config/hue/conf should be the api key.
+the IP variable should be the bridges ip, you can find this out by going onto your router/using nmap.
