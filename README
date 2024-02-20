@@ -5,5 +5,10 @@ put the hue file into $PATH, that could be .local/bin or /usr/bin.
 
 How to configure
 read https://developers.meethue.com/develop/get-started-2/
-the USER variable in .config/hue/conf should be the api key.
-the IP variable should be the bridges ip, you can find this out by going onto your router/using nmap.
+
+example:
+USER="foo"
+IP="bar"
+
+USER is the api key you made.
+IP is the bridges ip, you can figure this out by going into your router or using nmap.
