@@ -1,13 +1,13 @@
 #!/bin/sh
 # Utility to change a hue lights state
-# READ THIS: https://developers.meethue.com/develop/get-started-2/
+# Configure via .config/hue/conf
 
 . $HOME/.config/hue/conf
+LIGHT="$1"
 
 curl_api() {
-	curl http://$IP/api/$USER/lights/$1/state "$@"
+	curl "http://$IP/api/$USER/lights/$LIGHT/state" "$@"
 }
-
 case "$2" in 
 	on) curl_api -X PUT --data-raw '{"on":true}' ;;
 	off) curl_api -X PUT --data-raw '{"on":false}' ;;
