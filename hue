@@ -1,6 +1,7 @@
 #!/bin/sh
 # Utility to change a hue lights state
 # Configure via .config/hue/conf
+# credits to wael for helping me make it posix
 
 . $HOME/.config/hue/conf
 LIGHT="$1"
