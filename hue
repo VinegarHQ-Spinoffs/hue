@@ -1,10 +1,7 @@
 #!/bin/sh
 # Utility to change a hue lights state
-# READ THIS: https://developers.meethue.com/develop/get-started-2/
 
-USER=""
-IP=""
-LIGHT=""
+. $HOME/.config/hue/conf
 
 curl_api() {
 	curl http://$IP/api/$USER/lights/$LIGHT/state "$@"
